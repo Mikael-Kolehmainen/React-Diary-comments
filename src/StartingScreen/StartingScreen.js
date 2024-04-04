@@ -1,33 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './StartingScreen.css';
-import LoginScreen from '../LoginScreen/LoginScreen.js';
-import { Route, Routes, Link } from "react-router-dom";
-
-const StartingScreen = () => {
-  useEffect(() => {
-    const handleKeyPress = () => {
-      <Routes>
-      <Route path="/Loginscreen" element={<LoginScreen />} />
-      </Routes>
-
-    };
-
-    window.addEventListener('keydown', handleKeyPress);
-    return () => {
-      window.removeEventListener('keydown', handleKeyPress);
-    };
-  }, []);
-
-  const handleMouseClick = () => {
-
-  };
-
-  return (
-    <div onClick={handleMouseClick}>
-
-    </div>
-  );
-};
+import { useNavigate } from 'react-router-dom';
 
 // Define Diary component
 function Diary() {
@@ -35,12 +8,42 @@ function Diary() {
     <div className="App">
       <header className="App-header">
         <h1>This is my first diary.</h1>
-        <header className="Blink">
-          <h6>Press any key to continue...</h6>
-        </header>
+        <div className="Blink">
+          <h6>Press any key or click to continue...</h6>
+        </div>
       </header>
     </div>
   );
 }
+
+const StartingScreen = () => {
+  let navigate = useNavigate(); // Hook to navigate
+
+  useEffect(() => {
+    // Function to navigate to LoginScreen
+    const navigateToLoginScreen = () => {
+      navigate('/Loginscreen');
+    };
+
+    // Event listener for key press
+    const handleKeyPress = (event) => {
+      navigateToLoginScreen();
+    };
+
+    // Add keydown event listener
+    window.addEventListener('keydown', handleKeyPress);
+    
+    // Cleanup function for component unmount
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [navigate]); // Dependency array
+
+  return (
+    <div onClick={() => navigate('/Loginscreen')}>
+      <Diary />
+    </div>
+  );
+};
 
 export default StartingScreen;
