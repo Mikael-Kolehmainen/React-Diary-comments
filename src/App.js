@@ -1,13 +1,20 @@
-import { Route, Routes } from "react-router-dom";
-import  StartingScreen  from './StartingScreen/StartingScreen';
-import LoginScreen from './LoginScreen/LoginScreen';
-
+import React from 'react';
+import { Routes, Route, useLocation } from "react-router-dom";
+import StartingScreen from './Sites/StartingScreen';
+import LoginScreen from './Sites/LoginScreen';
+import { AnimatePresence } from "framer-motion";
 
 function App() {
-  return <Routes>
-    <Route path="/" element={<StartingScreen /> }/>
-    <Route path="/Loginscreen" element={<LoginScreen />} />
-  </Routes>
+const location = useLocation();
+
+  return (
+    <AnimatePresence mode='wait'>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<StartingScreen />} />
+        <Route path="/Loginscreen" element={<LoginScreen />} />
+      </Routes>
+    </AnimatePresence>
+  );
 }
 
 export default App;

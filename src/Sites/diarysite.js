@@ -1,4 +1,4 @@
-import './diarysite.css';
+import './styles.css';
 
 function Diary() {
     return (

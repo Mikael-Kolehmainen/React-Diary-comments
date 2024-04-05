@@ -1,4 +1,4 @@
-import './LoginScreen.css';
+import './styles.css';
 
 function LoginScreen() {
   return (
