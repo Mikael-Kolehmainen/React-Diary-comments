@@ -1,15 +1,35 @@
-import './styles.css';
+import "./styles.css";
 
 function LoginScreen() {
   return (
-    <div className="LoginScreen">
-      <header className="LoginScreen">
-        <h1>This is my login screen.</h1>
+    <div class="wrapper">
+      <form action="">
+        <h1>Login</h1>
+        <div class="input-box">
+          <input type="text" placeholder="UserName" required></input>
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" required></input>
+          <i class="bx bxs-lock-alt"></i>
+        </div>
 
-        <header className="Blink">
-        <h6>Please log in</h6>
-        </header>
-      </header>
+        <div class="remember-forgot">
+          <label>
+            <input type="checkbox"></input> Remember me
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn">
+          Login
+        </button>
+        <div class="register-link">
+          <p>
+            Don't have an account? <a href="#">Register</a>
+          </p>
+        </div>
+      </form>
     </div>
   );
 }
