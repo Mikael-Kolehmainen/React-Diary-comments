@@ -17,7 +17,7 @@ Welcome to Diary based on React! This repository hosts the Diary web page.
 
 An eager junior software developer whose passion is to work in web development in the future!
 
-### Contact Us
+### Contact Me
 
 Have questions, suggestions, or feedback? I'd love to hear from you! Feel free to reach out via LinkedIn and email:
 https://www.linkedin.com/in/jere-koivisto/
