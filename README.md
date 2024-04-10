@@ -6,7 +6,7 @@ Welcome to Diary based on React! This repository hosts the Diary web page.
 
 ### About Diary
 
-[Project Name] is [briefly describe the purpose or goal of the project]. It [mention any key features or functionalities].
+Diary is React based project, which is beginner-friendly. I wanted to start small and I think with small steps, I am progressing into a complete product.
 
 ### Why Diary project?
 
