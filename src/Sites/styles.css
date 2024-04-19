@@ -55,17 +55,57 @@ body {
 .wrapper {
   position: relative;
   width: 400px;
-  height: 550px;
+  height: 480px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   backdrop-filter: blur(20px);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   display: flex;
+  overflow: hidden;
+  transition: height 0.2s ease;
+}
+
+.forgot {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.wrapper .form-box.forgot {
+  position: absolute;
+  transition: none;
+  transform: translateY(400px);
+}
+
+.wrapper.active .form-box.forgot {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
 }
 
 .wrapper .form-box.login {
-  display: none;
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active {
+  height: 550px;
 }
 
 .wrapper .form-box {

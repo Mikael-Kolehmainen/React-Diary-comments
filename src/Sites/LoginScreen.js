@@ -1,37 +1,53 @@
+import React, { useState } from "react";
 import "./styles.css";
 
 function LoginScreen() {
+  const [isActive, setIsActive] = useState(false); // false means not active, true means active
+  const [forgotActive, setForgotActive] = useState(false); // For forgot password section
+
+  const toggleActive = () => {
+    setIsActive(!isActive); // Toggle the active state
+    setForgotActive(false);
+  };
+
   return (
-    <div class="wrapper">
-      <div class="form-box login">
+    <div className={`wrapper ${isActive ? "active" : ""}`}>
+      <div className="form-box login">
         <h2>Login</h2>
         <form action="#">
-          <div class="input-box">
-            <span class="icon">
-              <i class="bx bxs-envelope"></i>
+          <div className="input-box">
+            <span className="icon">
+              <i className="bx bxs-envelope"></i>
             </span>
             <input type="email" placeholder="Email" required></input>
           </div>
-          <div class="input-box">
-            <span class="icon">
-              <i class="bx bxs-lock-alt"></i>
+          <div className="input-box">
+            <span className="icon">
+              <i className="bx bxs-lock-alt"></i>
             </span>
             <input type="password" placeholder="Password" required></input>
           </div>
-          <div class="remember-forgot">
+          <div className="remember-forgot">
             <label>
               <input type="checkbox"></input>
               Remember me
             </label>
-            <a href="#">Forgot password?</a>
+            <div className="forgot">
+              <p>
+                <a href="#" onClick={toggleActive} className="forgot-link">
+                  Forgot password?
+                </a>
+              </p>
+            </div>
           </div>
-          <button type="submit" class="btn">
+
+          <button type="submit" className="btn">
             Login
           </button>
-          <div class="login-register">
+          <div className="login-register">
             <p>
               Don't have an account?{" "}
-              <a href="#" class="register-link">
+              <a href="#" onClick={toggleActive} className="register-link">
                 Register
               </a>
             </p>
@@ -39,39 +55,68 @@ function LoginScreen() {
         </form>
       </div>
 
-      <div class="form-box register">
+      <div className="form-box register">
         <h2>Registration</h2>
         <form action="#">
-          <div class="input-box">
-            <span class="icon">
-              <i class="bx bxs-user"></i>
+          <div className="input-box">
+            <span className="icon">
+              <i className="bx bxs-user"></i>
             </span>
             <input type="email" placeholder="Username" required></input>
           </div>
-          <div class="input-box">
-            <span class="icon">
-              <i class="bx bxs-envelope"></i>
+          <div className="input-box">
+            <span className="icon">
+              <i className="bx bxs-envelope"></i>
             </span>
             <input type="email" placeholder="Email" required></input>
           </div>
-          <div class="input-box">
-            <span class="icon">
-              <i class="bx bxs-lock-alt"></i>
+          <div className="input-box">
+            <span className="icon">
+              <i className="bx bxs-lock-alt"></i>
             </span>
             <input type="password" placeholder="Password" required></input>
           </div>
-          <div class="remember-forgot">
+          <div className="remember-forgot">
             <label>
               <input type="checkbox"></input>I agree to the terms & conditions
             </label>
           </div>
-          <button type="submit" class="btn">
+          <button type="submit" className="btn">
             Register
           </button>
-          <div class="login-register">
+          <div className="login-register">
             <p>
-              Already have an account?{" "}
-              <a href="#" class="login-link">
+              Don't have an account?{" "}
+              <a href="#" onClick={toggleActive} className="login-link">
+                Login
+              </a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div className={`form-box forgot ${forgotActive ? "active" : ""}`}>
+        <h2>Enter your email</h2>
+        <form action="#">
+          <div className="input-box">
+            <span className="icon">
+              <i className="bx bxs-user"></i>
+            </span>
+            <input type="saefsf" placeholder="rdfdrsf" required></input>
+          </div>
+          <div className="input-box">
+            <span className="icon">
+              <i className="bx bxs-envelope"></i>
+            </span>
+            <input type="email" placeholder="Email" required></input>
+          </div>
+          <button type="submit" className="btn">
+            Send
+          </button>
+          <div className="login-register">
+            <p>
+              Don't have an account?{" "}
+              <a href="#" onClick={toggleActive} className="login-link">
                 Login
               </a>
             </p>
