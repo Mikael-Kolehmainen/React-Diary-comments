@@ -3,11 +3,9 @@ import "./styles.css";
 
 function LoginScreen() {
   const [isActive, setIsActive] = useState(false); // false means not active, true means active
-  const [forgotActive, setForgotActive] = useState(false); // For forgot password section
 
   const toggleActive = () => {
     setIsActive(!isActive); // Toggle the active state
-    setForgotActive(false);
   };
 
   return (
@@ -34,7 +32,7 @@ function LoginScreen() {
             </label>
             <div className="forgot">
               <p>
-                <a href="#" onClick={toggleActive} className="forgot-link">
+                <a href="#" className="forgot-link">
                   Forgot password?
                 </a>
               </p>
@@ -83,35 +81,6 @@ function LoginScreen() {
           </div>
           <button type="submit" className="btn">
             Register
-          </button>
-          <div className="login-register">
-            <p>
-              Don't have an account?{" "}
-              <a href="#" onClick={toggleActive} className="login-link">
-                Login
-              </a>
-            </p>
-          </div>
-        </form>
-      </div>
-
-      <div className={`form-box forgot ${forgotActive ? "active" : ""}`}>
-        <h2>Enter your email</h2>
-        <form action="#">
-          <div className="input-box">
-            <span className="icon">
-              <i className="bx bxs-user"></i>
-            </span>
-            <input type="saefsf" placeholder="rdfdrsf" required></input>
-          </div>
-          <div className="input-box">
-            <span className="icon">
-              <i className="bx bxs-envelope"></i>
-            </span>
-            <input type="email" placeholder="Email" required></input>
-          </div>
-          <button type="submit" className="btn">
-            Send
           </button>
           <div className="login-register">
             <p>
