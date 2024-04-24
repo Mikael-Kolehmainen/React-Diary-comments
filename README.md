@@ -15,7 +15,7 @@ Diary is React based project, which is beginner-friendly. I wanted to start smal
 
 ### About Me
 
-An eager junior software developer whose passion is to work in web development in the future!
+Software developer whose passion is to work in web development in the future!
 
 ### Contact Me
 
