@@ -1,12 +1,11 @@
-const { Schema } = require("@mui/icons-material");
 const mongoose = require("mongoose");
-const Scema = mongoose.Schema;
+const { Schema } = mongoose;
 
 const UserSchema = new Schema({
-  name: string,
-  email: string,
-  password: string,
-  dateofBirth: Date,
+  name: String,
+  email: String,
+  password: String,
+  dateOfBirth: Date,
 });
 
 const User = mongoose.model("User", UserSchema);
