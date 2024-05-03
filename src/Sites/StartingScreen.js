@@ -1,7 +1,13 @@
+/*
+  I changed the order of the imports, so that first we import packages and then
+  your project files, it might not make sense right now, but when the project gets
+  bigger, it'll be a lot easier to manage things when the imports have some kind of
+  order.
+*/
 import React, { useEffect, useState } from "react";
-import "./styles.css";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import "./styles.css";
 
 // Define Diary component
 function Diary() {
