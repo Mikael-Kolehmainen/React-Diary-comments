@@ -1,3 +1,8 @@
+/*
+  I would change React files to have the .jsx extension instead of .js, this is
+  so that's easier to differentiate between JSX files from regular JavaScript
+  files.
+*/
 import { AnimatePresence } from "framer-motion";
 import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
