@@ -26,6 +26,12 @@
   src: local("Poppins"), url("./../fonts/Poppins-Bold.ttf") format("truetype");
 }
 
+/*
+  I would also recommend that you would split the CSS code into multiple files,
+  for improving readability and easy of access. Maybe that common (body, h1, p, etc.)
+  global CSS rules would stay in their own files and then split CSS per page per file.
+*/
+
 .Diary {
   text-align: center;
 }
