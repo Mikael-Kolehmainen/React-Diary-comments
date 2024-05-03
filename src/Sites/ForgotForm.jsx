@@ -1,6 +1,14 @@
-import "./styles.css";
+/*
+  Changes in this file, StartingScreen.jsx:
+    - From regular function syntax to arrow function syntax.
+    - Moved styles.css import to App.jsx.
 
-function ForgotForm() {
+  Things that should be fixed:
+    - Links (<a> tags) should have a valid href attribute, if you cannot provide
+    a valid href, use a button instead and style it accordingly with CSS.
+*/
+
+const ForgotForm = () => {
   return (
     <div className="wrapperForgot">
       <div className="form-box login">
@@ -49,6 +57,6 @@ function ForgotForm() {
       </div>
     </div>
   );
-}
+};
 
 export default ForgotForm;
