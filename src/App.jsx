@@ -6,6 +6,7 @@
 import { AnimatePresence } from "framer-motion";
 import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
+import "./Sites/styles.css";
 import ForgotForm from "./Sites/ForgotForm";
 import LoginScreen from "./Sites/LoginScreen";
 import StartingScreen from "./Sites/StartingScreen";
