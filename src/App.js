@@ -5,7 +5,16 @@ import ForgotForm from "./Sites/ForgotForm";
 import LoginScreen from "./Sites/LoginScreen";
 import StartingScreen from "./Sites/StartingScreen";
 
-function App() {
+/*
+  Here I'm using arrow function syntax for defining the function, this syntax
+  is more consistent with modern JavaScript coding styles. I would recommend using
+  it instead of the regular function syntax. :)
+*/
+const App = () => {
+  /*
+    Couldn't see the reason for useLocation(), the functionality with the animations
+    stays the same without it in this case. I'll leave it here anyways.
+  */
   const location = useLocation();
 
   return (
@@ -17,6 +26,6 @@ function App() {
       </Routes>
     </AnimatePresence>
   );
-}
+};
 
 export default App;
