@@ -1,4 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*
+  I would recommend downloading the font family and storing it yourself.
+  This will reduce latency, reduce dependency on external services and will increase
+  more control and security over your application.
+
+  I'll give you an example of loading the font family yourself. Google font families can be downloaded from here: https://fonts.google.com/specimen/Poppins
+*/
+
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+    url("./../fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  src: local("Poppins"), url("./../fonts/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  src: local("Poppins"), url("./../fonts/Poppins-Bold.ttf") format("truetype");
+}
 
 .Diary {
   text-align: center;
